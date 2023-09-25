@@ -1,10 +1,23 @@
 # Docker + Node.js
 
-Dockerize a Node.js app. 
+Dockerizing Your Node.js App
+Building the Docker Image:
+bash
+Copy code
+docker build -t username.demoapp:1.0 .
+Running the Docker Container:
+To run the container:
 
-Use docker build -t username.demoapp:1.0 . to build the image </br>
-Use docker run image_id to run the container but you will need to do port forwarding to actually see the app running on the port.</br>
-Use docker run -p 5000:8080 image_id for port forwarding and open [loacal host ](http://localhost:5000/) in a browser 
+bash
+Copy code
+docker run image_id
+Note: This will run the container, but to access the app via a browser, you need to forward the port.
 
+Port Forwarding:
+To forward the port and access the app:
 
+bash
+Copy code
+docker run -p 5000:8080 image_id
+Then, open your browser and navigate to http://localhost:5000.
 
